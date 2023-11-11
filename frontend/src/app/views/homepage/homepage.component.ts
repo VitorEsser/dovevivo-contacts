@@ -1,48 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Contact } from "../../models/contact.model";
+import { ContactService } from "../../core/services/contact.service";
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.css'
 })
-export class HomepageComponent {
+export class HomepageComponent implements OnInit{
 
-  contacts: Contact[] = [
-    {
-      name: "Vitor",
-      surname: "Esser",
-      phone: "842374382742"
-    },
-    {
-      name: "Vitor",
-      surname: "Esser",
-      phone: "842374382742"
-    },
-    {
-      name: "Vitor",
-      surname: "Esser",
-      phone: "842374382742"
-    },
-    {
-      name: "Vitor",
-      surname: "Esser",
-      phone: "842374382742"
-    },
-    {
-      name: "Vitor",
-      surname: "Esser",
-      phone: "842374382742"
-    },
-    {
-      name: "Vitor",
-      surname: "Esser",
-      phone: "842374382742"
-    },
-    {
-      name: "Vitor",
-      surname: "Esser",
-      phone: "842374382742"
-    }
-  ]
+  contacts: Contact[] = []
+
+  constructor(private contactService: ContactService) { }
+
+  ngOnInit(): void {
+    this.contactService.list().subscribe(contacts => {
+      this.contacts = contacts
+    })
+  }
 }
