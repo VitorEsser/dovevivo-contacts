@@ -1,4 +1,4 @@
-<ng-container *ngIf="contacts.length === 0">
+<ng-container *ngIf="contacts.length === 0; else content">
   <div class="msg">
     <p>
       No contacts created! Go to the 
@@ -9,3 +9,10 @@
     </p>
   </div>
 </ng-container>
+<ng-template #content>
+  <div class="contacts-content">
+    <div *ngFor="let contact of contacts" class="card-content">
+      <app-card [contact]="contact"></app-card>
+    </div>
+  </div>
+</ng-template>

@@ -8,5 +8,41 @@ import { Contact } from "../../models/contact.model";
 })
 export class HomepageComponent {
 
-  contacts: Contact[] = []
+  contacts: Contact[] = [
+    {
+      name: "Vitor",
+      surname: "Esser",
+      phone: "842374382742"
+    },
+    {
+      name: "Vitor",
+      surname: "Esser",
+      phone: "842374382742"
+    },
+    {
+      name: "Vitor",
+      surname: "Esser",
+      phone: "842374382742"
+    },
+    {
+      name: "Vitor",
+      surname: "Esser",
+      phone: "842374382742"
+    },
+    {
+      name: "Vitor",
+      surname: "Esser",
+      phone: "842374382742"
+    },
+    {
+      name: "Vitor",
+      surname: "Esser",
+      phone: "842374382742"
+    },
+    {
+      name: "Vitor",
+      surname: "Esser",
+      phone: "842374382742"
+    }
+  ]
 }

@@ -8,13 +8,15 @@ import { AddContactComponent } from './views/add-contact/add-contact.component';
 
 import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './views/homepage/homepage.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AddContactComponent,
-    HomepageComponent
+    HomepageComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
