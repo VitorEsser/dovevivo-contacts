@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AddContactComponent } from './views/add-contact/add-contact.component';
 
-import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './views/homepage/homepage.component';
 import { CardComponent } from './components/card/card.component';
+
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { CardComponent } from './components/card/card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
