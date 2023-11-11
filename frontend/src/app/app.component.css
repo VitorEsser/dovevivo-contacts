@@ -1,0 +1,4 @@
+.content {
+  background-color: rgb(243, 241, 241);
+  min-height: calc(100vh - 60px);
+}
