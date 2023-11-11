@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddContactComponent } from "./views/add-contact/add-contact.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'add-contact',
+    component: AddContactComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
